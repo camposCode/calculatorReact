@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Result = ({ value }) => {
-    console.log("Renderizacion de Result");
+
   return (
     <div>
       <div className="result">
@@ -13,7 +13,11 @@ const Result = ({ value }) => {
 }
 
 Result.propTypes = {
-    value: PropTypes.string
+    value: PropTypes.string.isRequired
+}
+
+Result.defaultProps = {
+    value: '0'
 }
 
 export default Result
