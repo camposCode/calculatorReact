@@ -1,9 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import './Button.css'
 
 const Button = ({ text, type, clickHandler }) => {
   return (
-    <button className={ type } onClick={() => clickHandler(text)}>
+    <button
+        //type = button-long-text 
+      className={ type } 
+      onClick={() => clickHandler(text)}>
         <span>
             {
               text
