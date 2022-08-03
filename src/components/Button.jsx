@@ -1,9 +1,9 @@
 import React from 'react'
-import PropTypes, { string } from 'prop-types'
+import PropTypes from 'prop-types'
 
 const Button = ({ text, type, clickHandler }) => {
   return (
-    <button className={ type } onClick={() => {clickHandler(text)}}>
+    <button className={ type } onClick={() => clickHandler(text)}>
         <span>
             {
               text
@@ -13,7 +13,7 @@ const Button = ({ text, type, clickHandler }) => {
   )
 }
 
-Button.prototypes = {
+Button.propTypes = {
   type: PropTypes.string,
   text: PropTypes.string.isRequired,
   clickHandler: PropTypes.func.isRequired

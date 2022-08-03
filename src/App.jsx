@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css'
 import Button from './components/Button'
+import MathOperations from './components/MathOperations'
 import Result from './components/Result'
 
 const App = () => {
@@ -26,13 +27,13 @@ const App = () => {
         <button>AC</button>
         <button>,</button>
       </div>
-      <div className="math-operations">
-        <button>+</button>
-        <button>-</button>
-        <button>*</button>
-        <button>/</button>
-        <button>=</button>
-      </div>
+      <MathOperations 
+        onClickOperation={ operation => 
+          console.log('operation:' , operation) } 
+        
+        onClickEqual={ equal =>
+          console.log('equal', equal)}
+      />
     </main>
   )
 }
