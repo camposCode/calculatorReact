@@ -7,7 +7,10 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
 
 const renderButtons = onClickNumber => {
     const renderButton = number => (
-        <Button text={number.toString()} clickHandler={onClickNumber} key={number}/>
+        <Button 
+            text={ number.toString() } 
+            clickHandler={ onClickNumber } 
+            key={ number }/>
     )
     return numbers.map(renderButton)
 }
